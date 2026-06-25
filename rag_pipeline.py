@@ -22,7 +22,7 @@ from langchain_community.document_loaders import TextLoader             # For ch
 from langchain_text_splitters import RecursiveCharacterTextSplitter     # For chunking
 from langchain_huggingface import HuggingFaceEmbeddings                 # For embedding
 from langchain_community.vectorstores import FAISS                      # Vector database
-from langchain_groq import ChatGroq                                     # Connect ke Groq API
+from langchain_groq import ChatGroq                                     # Connect to API Groq
 from langchain.chains import RetrievalQA                                # Orkestrator
 from langchain.prompts import PromptTemplate                            # For reading and formatting file system_prompt.txt
 
@@ -88,23 +88,23 @@ def build_rag_pipeline():
     """
 
     # ------------------------------------------------------------------
-    # LANGKAH 1: LOAD — Membaca file katalog produk
+    # First Step: LOAD — Reading the product catalog file
     # ------------------------------------------------------------------
-    # TextLoader membaca file teks biasa dan mengubahnya jadi objek
-    # Document yang bisa diproses LangChain.
+    # Text Loader reads plain text files and converts them into objects
+    # Documents that can be processed by LangChain.
     loader = TextLoader(DATA_PATH, encoding="utf-8")
     documents = loader.load()
 
     # ------------------------------------------------------------------
-    # LANGKAH 2: CHUNK — Memotong dokumen jadi bagian-bagian kecil
+    # Second Step: CHUNK — Cutting documents into small pieces
     # ------------------------------------------------------------------
-    # Kenapa perlu di-chunk?
-    # LLM punya batas panjang teks yang bisa diproses sekaligus.
-    # Dengan memotong, kita bisa memilih HANYA bagian yang relevan
-    # untuk dikirim ke LLM — lebih efisien dan akurat.
+    # Why is chunking necessary??
+    # LLM have a limit on the length of text they can process at one time.
+    # By filtering, we can select ONLY the relevant parts
+    # to send to the LLM—which is more efficient and accurate.
     #
-    # separators: urutan prioritas pemisah saat memotong
-    # "\n---\n" = garis pemisah antar produk di katalog kita
+    # separators: Order of priority for separators when cutting
+    # "\n---\n" = the dividing line between products in our catalog
     splitter = RecursiveCharacterTextSplitter(
         chunk_size=CHUNK_SIZE,
         chunk_overlap=CHUNK_OVERLAP,
@@ -113,54 +113,53 @@ def build_rag_pipeline():
     chunks = splitter.split_documents(documents)
 
     # ------------------------------------------------------------------
-    # LANGKAH 3: EMBED — Mengubah teks jadi vektor angka
+    # Third Step: EMBED — Converting text to numerical vectors
     # ------------------------------------------------------------------
-    # Embedding adalah proses mengubah teks jadi deretan angka (vektor)
-    # yang merepresentasikan "makna" teks tersebut.
-    # Teks dengan makna serupa akan menghasilkan vektor yang berdekatan.
+    # Embedding is the process of converting text into a sequence of numbers (a vector)
+    # that represents the “meaning” of the text.
+    #  Texts with similar meanings will produce vectors that are close to each other.
     #
-    # Catatan: Model akan diunduh otomatis pertama kali (~400MB).
-    # Setelah itu tersimpan di cache lokal.
-    embeddings = HuggingFaceEmbeddings(
+    # Note: The model will be downloaded automatically the first time (~400MB).
+    # After that, it is stored in the local cache.
         model_name=EMBEDDING_MODEL,
         model_kwargs={"device": "cpu"},
         encode_kwargs={"normalize_embeddings": True}
     )
 
     # ------------------------------------------------------------------
-    # LANGKAH 4: STORE — Menyimpan vektor ke FAISS
+    # Fourth Step: STORE — Storing vectors in FAISS
     # ------------------------------------------------------------------
-    # FAISS (Facebook AI Similarity Search) adalah database vektor
-    # yang sangat cepat untuk mencari kemiripan antar teks.
-    # Semua chunk + vektornya disimpan di sini di memory lokal.
+    # FAISS (Facebook AI Similarity Search) is very fast database vektor
+    # for finding similarities between texts.
+    # All chunks and their vectors are stored here in local memory.
     vectorstore = FAISS.from_documents(chunks, embeddings)
 
     # ------------------------------------------------------------------
-    # LANGKAH 5: RETRIEVER — Menyiapkan mekanisme pencarian
+    # Fifth Step: RETRIEVER — Setting up a search mechanism
     # ------------------------------------------------------------------
-    # Retriever adalah komponen yang menerima pertanyaan pengguna,
-    # mengubahnya jadi vektor, lalu mencari chunk paling mirip
-    # di dalam FAISS vectorstore.
+    # A retriever is a component that receives user queries,
+    # converts them into vectors, and then searches for
+    # the most similar chunks  in the FAISS vector store.
     retriever = vectorstore.as_retriever(
         search_type="similarity",
         search_kwargs={"k": TOP_K_RESULTS}
     )
 
     # ------------------------------------------------------------------
-    # LANGKAH 6: Amankan API
+    # Sixth Step: Secure the API
     # ------------------------------------------------------------------
-    # Kode ini mmengambil dari Streamlit Secrets
+    # This code taken from Streamlit Secrets
     if "GROQ_API_KEY" in st.secrets:
         os.environ["GROQ_API_KEY"] = st.secrets["GROQ_API_KEY"]
     else:
-        pass #Mengunci panggilan Groq
+        pass #Lock a Groq call
 
     # ------------------------------------------------------------------
-    # LANGKAH 7: LLM — Inisialisasi model bahasa via Groq
+    # Seventh Step: LLM — Initializating a languange model using Groq
     # ------------------------------------------------------------------
-    # Groq adalah platform yang menyediakan akses ke LLM dengan
-    # kecepatan inferensi sangat tinggi.
-    # Temperature 0.3 = jawaban relatif konsisten dan faktual
+    # Groq is platform an access into LLM with
+    # ultra hingh speed interfence.
+    # Temperature 0.3 = relatively consistent and factual answers
     llm = ChatGroq(
         model=LLM_MODEL,
         temperature=0.3,
@@ -168,7 +167,7 @@ def build_rag_pipeline():
     )
 
     # ------------------------------------------------------------------
-    # LANGKAH 8: PROMPT — Template instruksi untuk LLM
+    # Eighth Step: PROMPT — Instruction template for LLM
     # ------------------------------------------------------------------
     prompt = PromptTemplate(
         template=SYSTEM_PROMPT_TEMPLATE,
@@ -176,13 +175,13 @@ def build_rag_pipeline():
     )
 
     # ------------------------------------------------------------------
-    # LANGKAH 9: CHAIN — Menggabungkan semua komponen
+    # Ninth: CHAIN — Combining all the components
     # ------------------------------------------------------------------
-    # RetrievalQA menggabungkan Retriever + LLM + Prompt menjadi
-    # satu pipeline yang bisa langsung menerima pertanyaan.
+    # RetrievalQA combines a Retriever, an LLM, and a Prompt into
+    # a single pipeline that can directly accept questions.
     #
-    # chain_type="stuff" = semua chunk yang diambil langsung
-    # dimasukkan ke dalam satu prompt (cocok untuk chunk sedikit)
+    # All chunks that are extracted are immediately
+    # included in a single prompt (suitable for a small number of chunks)
     chain = RetrievalQA.from_chain_type(
         llm=llm,
         chain_type="stuff",

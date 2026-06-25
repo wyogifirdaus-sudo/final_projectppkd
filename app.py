@@ -136,10 +136,10 @@ with st.sidebar:
         "4. Es Campur Segar\n"
         "5. Air Mineral 600ml\n"
         "6. Smoothie Mangga\n"
-        "7. Es Krim cup"
+        "7. Es Krim cup\n"
         "8. Susu Coklat Hangat"
     )
-    st.subheader("💰 Value Packs"
+    st.subheader("💰 Value Packs\n"
         "1. Paket Duo\n"
         "2. Paket Keluarga\n"
         "3. Paket Vegetarian"

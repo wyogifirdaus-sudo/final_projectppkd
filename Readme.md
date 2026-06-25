@@ -1,3 +1,7 @@
+# Link Streamlit
+https://finalprojectppkd-xmzabwtfrnh73pn7acxysy.streamlit.app/
+
+
 # Smartphone Advisor
 
 Chatbot AI untuk tim sales dan marketing yang membantu membandingkan dan
