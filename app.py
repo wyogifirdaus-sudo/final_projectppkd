@@ -100,20 +100,18 @@ if user_input := st.chat_input("Tanyakan sesuatu tentang menu..."):
 
 # ── Sidebar ────────────────────────────────────────────────────────────
 with st.sidebar:
-    st.header("📋 Tentang Aplikasi")
+    st.header("🏣 Tentang BUMI ARSA GROUP")
     st.markdown(
-        "Aplikasi ini menggunakan teknologi **RAG** "
-        "_(Retrieval-Augmented Generation)_ untuk menjawab "
-        "pertanyaan berdasarkan katalog produk resmi.\n\n"
-        "Jawaban didasarkan **hanya** pada dokumen katalog, "
-        "bukan pengetahuan umum AI."
+        "Restoran ini didirikan oleh Satyoga Dewantara **(Bang Yogs),** "
+        "berdiri sejak **2017** dan telah memiliki cabang hingga **11** titik "
+        "dengan pusatnya berada di Pakis, Surabaya.\n\n"
+        "Kami tumbuh bukan untuk tenar semata, "
+        "melainkan menghadirkan kuliner bercita rasa tinggi."
     )
-
     st.divider()
 
-    st.subheader("📜 Produk Tersedia")
+    st.subheader("📜 Main Menu")
     st.markdown(
-        "Main Menu\n"
         "1. Nasi Goreng Spesial\n"
         "2. Ayam Bakar Madu\n"
         "3. Ikan Nila Goreng\n"
@@ -121,49 +119,31 @@ with st.sidebar:
         "5. Sate Kambing (10 tusuk)\n"
         "6. Capcay Goreng\n"
         "7. Gurame Asam Manis\n"
-        "8. Mie Goreng Jawa\n"
-        "Vegetarian Menu\n"
-        "1. Nasi Goreng Vegetarian\n"
-        "2. Tumis Kangkung Tahu\n"
-        "Drinks\n"
-        "1. Es Teh Manis - Teh hitam manis dengan es batu - Rp8.000\n"
-        "2. Teh Hangat - Teh hitam hangat, gula tersedia terpisah - Rp7.000\n"
-        "3. Jus Jeruk Segar - Jeruk peras segar, tanpa gula tambahan - Rp18.000\n"
-        "4. Es Campur Segar - Campuran buah, cincau, susu, sirup merah - Rp20.000\n"
-        "5. Air Mineral - Air mineral kemasan 600ml - Rp5.000\n"
-        "6. Smoothie Mangga - Mangga, yogurt, madu, es batu - Rp28.000\n"
-        "7. Milkshake Cokelat - Susu, es krim cokelat, sirup cokelat - Rp30.000\n"
-        "8. Es Krim cup - 1  scoop es krim vanilla/cokelat - Rp10.000\n"
-        "9. Susu Cokelat Hangat - Susu cokelat, disajikan hangat - Rp15.000\n"
-        "Value Pack\n"
-        "1. Paket Duo - 2 Nasi Goreng Spesial + 2 Es Teh Manis - Rp70.000\n"
-        "2. Paket Keluarga - 4 Nasi Goreng Spesial + 2 Ayam Bakar Madu + 4 Es Teh Manis + 2 Jus Jeruk - Rp200.000\n"
-        "3. Paket Vegetarian - 2 Nasi Goreng Vegetarian + 2 Teh Hangat - Rp67.000"
+        "8. Mie Goreng Jawa"
     )
-
+    st.subheader("🥦 Vegetarian Menu")
+    st.markdown(
+        "1. Nasi Goreng Vegetarian\n"
+        "2. Tumis Kangkung Tahu"
+    )
     st.divider()
 
-    st.subheader("⚙️ Arsitektur Sistem")
+    st.subheader("🥤 Drinks")
     st.markdown(
-        "```\n"
-        "Katalog Produk (TXT)\n"
-        "       ↓\n"
-        "  Document Loader\n"
-        "       ↓\n"
-        "  Text Splitter\n"
-        "       ↓\n"
-        "HuggingFace Embeddings\n"
-        "       ↓\n"
-        "  FAISS Vector Store\n"
-        "       ↓\n"
-        "    Retriever\n"
-        "       ↓\n"
-        " Groq LLM (Llama 3.3)\n"
-        "       ↓\n"
-        "  Jawaban Final\n"
-        "```"
+        "1. Es Teh Manis\n"
+        "2. Teh Hangat\n"
+        "3. Jus Jeruk Segar\n"
+        "4. Es Campur Segar\n"
+        "5. Air Mineral 600ml\n"
+        "6. Smoothie Mangga\n"
+        "7. Es Krim cup"
+        "8. Susu Coklat Hangat"
     )
-
+    st.subheader("💰 Value Packs"
+        "1. Paket Duo\n"
+        "2. Paket Keluarga\n"
+        "3. Paket Vegetarian"
+    )
     st.divider()
 
     if st.button("🔄 Reset Percakapan", use_container_width=True):

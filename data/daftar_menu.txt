@@ -4,7 +4,7 @@ ALAMAT: Jl. Soesilo Toer No. 73, Jakarta Pusat
 CONTACT CENTER: 021-1234567 / cs@bumirasa.com
 JAM OPERA5IONAL CONTACT CENTER: Senin-Minggu 08.00-22.00
 
-Vision: Being Top of Main Traditional Culinary
+Vision: Being Top of Culinary
 Mission: Serving Best Menu with Low Costing, Servants, and Hygiene Guaranteed
 
 Bussiness fields: Foods and Bevarages
@@ -43,18 +43,18 @@ Bussiness fields: Foods and Bevarages
 7. Capcay Goreng - Sayuran campur goreng, bakso, udang, dan ayam - Rp32.000
     Rasa: Dominan rasa gurih dengan sayuran berupa jagung muda, wortel, kembang kol, irisan cabai. Ditaburi dengan potongan bakso, udang, dan ayam.
     Sasaran: Untuk customer yang mencari sajian rendah kalori dan anti gluten.
-    Catatan: Bagi customer yang memiliki riwayat alergi pada daging merah ataupun seafood, salah satu atau kedua bahan dapat diganti dengan penambahan sayur.
+    Catatan: Bagi customer yang memiliki riwayat alergi pada daging merah ataupun seafood, salah satu atau kedua bahan dapat diganti dengan penambahan sayur. Menu ini juga direomendasikan bagi vegetarian.
 
 8. Mie Goreng Jawa - Mie goreng dengan bumbu khas Jawa, telur, dan kerupuk - Rp28.000
     Rasa: Mie dimasak dengan bumbu khas Jawa yang dominan rasa gurih, sedikit manis dan pedas> Disajikan dengan telur dadar dan kerupuk.
-    Sasaran: Untuk customer yang menyukai sajian otentik khas Jawa Tengah.
+    Sasaran: Untuk customer yang menyukai sajian Mie dan kuliner otentik khas Jawa Tengah.
     Catatan: Tidak disarakan bagi customer yang memiliki alergi gluten.
 
 --- Vegetarian Menu ---
 1. Nasi Goreng Vegetarian - Nasi goreng tanpa daging, tambahan tahu dan sayuran - Rp30.000
-    Rasa: Dominan rasa gurih yang disajikan dengan tahu krispi dan sayuran berupa potongan kacang polong, acar, dan irisan mentimun. Customer juga dapat memilih level kepedasan.
+    Rasa: Dominan rasa gurih yang disajikan dengan tahu krispi dan sayuran berupa potongan kacang polong, acar, dan irisan mentimun. Customer juga dapat memilih level kepedasan dari 0 - 5.
     Sasaran: Untuk customer yang mencari nasi goreng enak tetapi tidak ada kondimen daging di dalamnya.
-    Catatan: 
+    Catatan: Untuk customer yang menyukai cita rasa pedas dapat memilih tingkat kepedasan dari level 0 - 5.
 
 2. Tumis Kangkung Tahu - Tahu goreng, kangkung tumis bawang putih - Rp18.000
     Rasa: Kangkung ditumis dengan minyak bawang putih dan diberi sedikit saus tiram, dan irisan cabai yang memiliki dominan rasa gurih dan sedikit pedas.
@@ -63,24 +63,63 @@ Bussiness fields: Foods and Bevarages
 
 --- Drinks ---
 1. Es Teh Manis - Teh hitam manis dengan es batu - Rp8.000
+    Rasa: Dominan rasa manis dengan ukuran gelas reguler.
+    Sasaran: Untuk customer yang membutuhkan minuman manis dengan kesegaran tertinggi.
+    Catatan: Bagi customer yang memiliki riwayat diabetes dapat meminta tanpa gula dan mendapat potongan harga sebesar Rp3.000. Sedangkan bagi customer yang meminta less sugar tidak dikenakan potongan harga.
+
 2. Teh Hangat - Teh hitam hangat, gula tersedia terpisah - Rp7.000
+    Rasa: Dominan segar teh tradisional dengan ukuran gelas reguler.
+    Sasaran: Untuk customer yang menyukai cita rasa teh sejati.
+    Catatan: Bagi customer dapat menakar tingkat kemanisan karena gula terpisah. Sehingga customer yang memiliki riwayat diabetes sangat dianjurkan memesan menu ini.
+
 3. Jus Jeruk Segar - Jeruk peras segar, tanpa gula tambahan - Rp18.000
+    Rasa: Dominan rasa manis dan sedikit asam khas jeruk yang masih segar yang disajikan pada gelas berukuran reguler.
+    Sasaran: Untuk customer yang menikmati kesegaran buah.
+    Catatan: Meskipun terbuat dari 100% buah alami, tetapi tidak disarankan untuk penderita diabetes.
+
 4. Es Campur Segar - Campuran buah, cincau, susu, sirup merah - Rp20.000
+    Rasa: Dominan manis dengan rasa dingin di dalam. Disajikan pada mangkuk berukuran medium dengan potongan buah blewah, melon, kelapa muda, apel dan nangka, juga potongan cincau. Disiram dengan sirup merah rasa cocopandan dan susu kental manis.
+    Sasaran: Untuk customer yang mencari sajian minuman yang menyegarkan di tengah teriknya cuaca.
+    Catatan: Sangat tidak direomendasikan untuk customer penderita diabetes.
+
 5. Air Mineral - Air mineral kemasan 600ml - Rp5.000
+    Rasa: Menyegarkan dengan air mmineral dari brand terbaik.
+    Sasaran: Seluruh customer tanpa terkecuali.
+    Catatan: Direkomendasikan untuk penderita diabetes.
+
 6. Smoothie Mangga - Mangga, yogurt, madu, es batu - Rp28.000
-7. Milkshake Cokelat - Susu, es krim cokelat, sirup cokelat - Rp30.000
-8. Es Krim cup - 1  scoop es krim vanilla/cokelat - Rp10.000
-9. Susu Cokelat Hangat - Susu cokelat, disajikan hangat - Rp15.000
+    Rasa: Dominan bercita rasa manis yang menyengarkan. Potongan buah mangga segar diblender dengan sedikit yogurt, madu, dan es batu yang dibuat mengental dengan disajikan pada gelas reguler.
+    Sasaran: Customer yang menyukai cita rasa manis dan cocok untuk di tengah hari terik.
+    Catatan: Penderita diabetes diperbolehkan memesan dengan catatan tanpa menggunakan madu.
+
+7. Es Krim cup - 1  scoop es krim vanilla/cokelat - Rp10.000
+    Rasa: Dominan bercita rasa manis yang dingin yang disajikan pada cup kertas.
+    Sasaran: Customer yang mencari hidangan penutup dari pilihan menu makanan bercita rasa pedas.
+    Catatan: Penderita diabetes tidak dianjurkan memesan.
+
+8. Susu Cokelat Hangat - Susu cokelat, disajikan hangat - Rp15.000
+    Rasa: Dominan manis yang disajikan hangat pada gelas berukuran reguler.
+    Sasaran: Customer yang mencari minuman hangat untuk sore hingga malam hari.
+    Catatan: Penderita diabetes tidak dianjurkan memesan.
 
 --- Value Pack ---
 1. Paket Duo - 2 Nasi Goreng Spesial + 2 Es Teh Manis - Rp70.000
     Berisi 2 porsi Nasi Goreng Spesial dan 2 Es Teh Manis
+    Rasa: Sajian Nasi Goreng bercita rasa dominan gurih dengan sedikit pedas. Disajikan dengan telur omelet, udang krispi dan acar. Disertai Es Teh Manis dengan ukuran gelas reguler.
+    Sasaran: Customer yang mencari hidangan hemat bersama keluarga/kekasih/orang tercinta.
+    Catatan: Bagi customer yang memiliki riwayat alergi, potongan udang dapat diganti dengan irisan bakso atau sosis. Serta customer yang memiliki riwayat diabetes dapat meminta tanpa gula dan mendapat potongan harga sebesar Rp3.000. Sedangkan bagi customer yang meminta less sugar tidak dikenakan potongan harga.
 
 2. Paket Keluarga - 4 Nasi Goreng Spesial + 2 Ayam Bakar Madu + 4 Es Teh Manis + 2 Jus Jeruk - Rp200.000
     Berisi 4 porsi Nasi Goreng Spesial + 2 porsi Ayam Bakar Madu + 4 Es Teh Manis + 2 Jus Jeruk
+    Rasa: Sajian Nasi Goreng bercita rasa dominan gurih dengan sedikit pedas. Disajikan dengan telur omelet, udang krispi dan acar. Disertai Es Teh Manis dan Jus Jeruk dengan ukuran gelas reguler.
+    Sasaran: Customer yang datang bersama keluaga/teman.
+    Catatan: Bagi customer yang memiliki riwayat alergi, potongan udang dapat diganti dengan irisan bakso atau sosis. Serta customer yang memiliki riwayat diabetes dapat meminta tanpa gula dan mendapat potongan harga sebesar Rp3.000. Sedangkan bagi customer yang meminta less sugar tidak dikenakan potongan harga.
 
 3. Paket Vegetarian - 2 Nasi Goreng Vegetarian + 2 Teh Hangat - Rp67.000
     Berisi 2 porsi Nasi Goreng Vegetarian + 2 Teh Hangat
+    Rasa: Dominan rasa gurih yang disajikan dengan tahu krispi dan sayuran berupa potongan kacang polong, acar, dan irisan mentimun. Customer juga dapat memilih level kepedasan dari 0 - 5. Disertai Teh Hangat dengan ukuran gelas reguler.
+    Sasaran: Customer Vegetarian yang mencari hidangan hemat bersama keluarga/kekasih/orang tercinta.
+    Catatan:Bagi customer dapat menakar tingkat kemanisan karena gula terpisah. Sehingga customer yang memiliki riwayat diabetes sangat dianjurkan memesan menu ini.
 
 
 Discount & Promo
@@ -162,7 +201,7 @@ Company Policies
 
 --- Additional Question and Answer ---
 Q: Apakah ada menu untuk penderita diabetes?
-A: Kami menyediakan opsi tanpa gula tambahan (contoh: teh tawar, kopi hitam, jus tanpa gula). Silakan informasikan ke staf.
+A: Kami menyediakan opsi tanpa gula tambahan (contoh: teh hangat, kopi hitam, jus tanpa gula). Silakan informasikan ke staf.
 
 Q: Bisakah meminta menu setengah porsi?
 A: Untuk beberapa menu seperti nasi goreng dan capcay bisa setengah porsi dengan harga 60% dari harga normal.
