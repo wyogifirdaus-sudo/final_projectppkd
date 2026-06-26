@@ -1,10 +1,10 @@
 # ============================================================
 # FOODS AND BEVERAGES ADVISOR
-# Chatbot Perbandingan Produk untuk Tim Sales & Marketing
+# Product Comparison Chatbot for Sales and Marketing Team
 # Powered by LangChain + Groq + FAISS
 # ============================================================
 #
-# CARA MENJALANKAN:
+# How to run:
 #   streamlit run app.py
 #
 # ============================================================
@@ -12,7 +12,7 @@
 import streamlit as st
 from rag_pipeline import build_rag_pipeline
 
-# ── Konfigurasi Halaman ────────────────────────────────────────────────
+# ── Page Configurasion ────────────────────────────────────────────────
 st.set_page_config(
     page_title="Foods and Bevarages Advisor",
     page_icon="🏬",
@@ -22,18 +22,18 @@ st.set_page_config(
 # ── Header ─────────────────────────────────────────────────────────────
 st.title("🏬 Foods and Bevarages Advisor")
 st.caption(
-    "Asisten AI untuk tim sales & marketing — "
-    "rekomendasi menu yang dapat dipilih sesuai katalog resmi"
+    "AI Assistant for Sales and Maketing Team — "
+    "Menu recommendations that can be selected from the official catalog"
 )
 
 # ── Load RAG Pipeline ──────────────────────────────────────────────────
-# Menggunakan st.cache_resource agar pipeline hanya dibangun sekali.
-# Tanpa ini, pipeline akan dibangun ulang setiap ada interaksi pengguna.
+# Use st.cache_resource for built pipeline only once.
+# Without this, pipeline will be rebuild to each communication each user
 @st.cache_resource(show_spinner=False)
 def load_pipeline():
     return build_rag_pipeline()
 
-# Tampilkan proses loading kepada pengguna
+# Showing loading process into user
 if "pipeline_loaded" not in st.session_state:
     with st.status("Memuat sistem AI...", expanded=True) as status:
         st.write("Membaca katalog produk...")
@@ -50,11 +50,11 @@ if "pipeline_loaded" not in st.session_state:
 
 chain = st.session_state.chain
 
-# ── Inisialisasi Riwayat Chat ──────────────────────────────────────────
+# ── Initializing Chat History  ──────────────────────────────────────────
 if "messages" not in st.session_state:
     st.session_state.messages = []
 
-# ── Tampilkan Contoh Pertanyaan (hanya saat belum ada chat) ───────────
+# ── Show Sample Questions (only when there are no chats yet) ───────────
 if not st.session_state.messages:
     st.info(
         "**Contoh pertanyaan yang bisa Anda ajukan:**\n\n"
@@ -65,20 +65,20 @@ if not st.session_state.messages:
         "- Menu apa yang paling cocok untuk penyuka mie?\n"
     )
 
-# ── Tampilkan Riwayat Chat ─────────────────────────────────────────────
+# ── TShow Chat History ─────────────────────────────────────────────
 for message in st.session_state.messages:
     with st.chat_message(message["role"]):
         st.markdown(message["content"])
 
-# ── Input Pengguna ─────────────────────────────────────────────────────
+# ── Input User ─────────────────────────────────────────────────────
 if user_input := st.chat_input("Tanyakan sesuatu tentang menu..."):
 
-    # Simpan dan tampilkan pesan pengguna
+    # Save and show messages user
     st.session_state.messages.append({"role": "user", "content": user_input})
     with st.chat_message("user"):
         st.markdown(user_input)
 
-    # Generate jawaban dari RAG chain
+    # Generate answer from RAG chain
     with st.chat_message("assistant"):
         with st.spinner("Mencari informasi di katalog..."):
             result = chain.invoke({"query": user_input})
@@ -87,14 +87,14 @@ if user_input := st.chat_input("Tanyakan sesuatu tentang menu..."):
 
         st.markdown(answer)
 
-        # Tampilkan referensi dokumen sumber (bisa di-collapse)
-        with st.expander("Lihat referensi dari katalog"):
+        # Show document reference (acceptable in collapse)
+        with st.expander("Show reference from katalog"):
             for i, doc in enumerate(source_docs, 1):
                 st.markdown(f"**Referensi {i}:**")
                 st.text(doc.page_content[:300] + "...")
                 st.divider()
 
-    # Simpan jawaban ke riwayat
+    # Save answer into History
     st.session_state.messages.append({"role": "assistant", "content": answer})
 
 

@@ -121,6 +121,7 @@ def build_rag_pipeline():
     #
     # Note: The model will be downloaded automatically the first time (~400MB).
     # After that, it is stored in the local cache.
+    embeddings = HuggingFaceEmbeddings(
         model_name=EMBEDDING_MODEL,
         model_kwargs={"device": "cpu"},
         encode_kwargs={"normalize_embeddings": True}
