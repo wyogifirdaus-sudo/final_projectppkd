@@ -2,13 +2,12 @@
 https://finalprojectppkd-xmzabwtfrnh73pn7acxysy.streamlit.app/
 
 
-# Smartphone Advisor
+# Foods and Beverages Advisor
 
-Chatbot AI untuk tim sales dan marketing yang membantu membandingkan dan
-merekomendasikan produk smartphone. Dibangun menggunakan teknologi
-RAG (Retrieval-Augmented Generation) dengan LangChain.
+AI-powered chatbot for restaurant sales and marketing teams using Retrieval-Augmented Generation (RAG). The application helps users discover menu recommendations, compare products, answer restaurant policy questions, and provide accurate information directly from the official restaurant catalog.
 
-## Arsitektur Sistem
+Built with LangChain, FAISS, Groq LLM, and Streamlit.
+## Advisor Sistem
 
 ```
 Katalog Produk (TXT)
@@ -84,25 +83,29 @@ smartphone-advisor/
 ├── .gitignore
 ├── README.md
 └── data/
-    └── katalog_smartphone.txt  <- Knowledge base produk
+    └── restaurant_catalog.txt  <- Knowledge base produk
 ```
 
-## Produk yang Tersedia
+## Knowledge Base
 
-1. Xiaomi Redmi Note 13 Pro+ 5G (Rp 4.299.000)
-2. Samsung Galaxy A55 5G (Rp 5.499.000)
-3. OPPO Reno 12 Pro (Rp 6.999.000)
-4. Samsung Galaxy S24 (Rp 13.499.000)
-5. Apple iPhone 15 (Rp 13.999.000)
-6. Apple iPhone 15 Pro Max (Rp 21.999.000)
+1. Company Profile
+2. Restaurant Vision & Mission
+3. Main Menu
+4. Vegetarian Menu
+5. Drinks
+6. Value Packs
+7. Promotions
+8. Discounts
+9. Restaurant Policies
+10. Frequently Asked Questions (FAQ)
 
 ## Contoh Pertanyaan
 
-- "Rekomendasikan smartphone untuk fotografi dengan budget 5 juta"
-- "Bandingkan Samsung Galaxy S24 dengan iPhone 15"
-- "HP mana yang pengisian baterainya paling cepat?"
-- "Smartphone apa yang cocok untuk konten kreator video?"
-- "Produk mana yang memiliki garansi software terlama?"
+- "Rekomendasikan main menu"
+- "Rekomendasikan vegetarian menu"
+- "Menu apa yang cocok untuk penyuka seafood?"
+- "Apa menu yang paling murah di Main Menu?"
+- "Menu apa yang paling cocok untuk penyuka mie?"
 
 ## Deployment ke Streamlit Community Cloud
 
